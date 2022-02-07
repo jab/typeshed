@@ -397,6 +397,7 @@ class MutableSet(AbstractSet[_T], Generic[_T]):
     def __isub__(self, s: AbstractSet[Any]) -> MutableSet[_T]: ...
 
 class MappingView(Sized):
+    _mapping: Mapping[Any, Any]  # undocumented
     def __init__(self, mapping: Mapping[Any, Any]) -> None: ...  # undocumented
     def __len__(self) -> int: ...
 
